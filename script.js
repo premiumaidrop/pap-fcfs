@@ -315,3 +315,4 @@ window.hideComingSoon = hideComingSoon;
 window.completeTask = completeTask;
 window.handleFormSubmit = handleFormSubmit;
 window.toggleFaq = toggleFaq;
+import { supabase } from './supabase'
