@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaeiyqaagnq/pap-token-gold-3d.png" type="image/png">
+    <title>PAP PREMIUM AIRDROP | Exclusive Waitlist Rewards</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaeiyqaagnq/pap-token-gold-3d.png" alt="PAP Token" class="nav-logo-img">
+                <span class="nav-logo-text">$PAP</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#join">Join Waitlist</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="nav-cta" onclick="scrollToSection('join')">Join Now</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" onclick="toggleMobileMenu()">Home</a>
+            <a href="#dashboard" onclick="toggleMobileMenu()">Dashboard</a>
+            <a href="#join" onclick="toggleMobileMenu()">Join Waitlist</a>
+            <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                FCFS Waitlist Now Live
+            </div>
+            <h1 class="hero-title">
+                Join the Exclusive<br>
+                <span class="gold-text">$PAP Waitlist Rewards</span>
+            </h1>
+            <p class="hero-subtitle">
+                First 1,000 users secure FCFS access to 2% of total PAP token supply.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">$500,000</span>
+                    <span class="stat-label">Reward Pool</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">20M</span>
+                    <span class="stat-label">PAP Tokens</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">1,000</span>
+                    <span class="stat-label">Spots Only</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('join')">
+                    <span>Join Waitlist</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="btn-secondary" onclick="showComingSoon()">
+                    <span>Learn More</span>
+                </button>
+            </div>
+            <div class="hero-token-float">
+                <img src="https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaeiyqaagnq/pap-token-gold-3d.png" alt="PAP Token" class="floating-token">
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Waitlist <span class="gold-text">Dashboard</span></h2>
+                <p class="section-desc">Real-time FCFS allocation tracker for PAP Premium Airdrop</p>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dash-card main-card">
+                    <div class="card-glow"></div>
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaei7yaagqq/reward-pool-treasure.png" alt="Reward Pool" class="card-icon-img">
+                    <h3 class="card-value gold-text">$500,000</h3>
+                    <p class="card-label">Total Reward Pool</p>
+                    <div class="card-sub">20,000,000 PAP Tokens</div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-glow"></div>
+                    <div class="spots-counter">
+                        <span class="spots-number" id="spotsRemaining">742</span>
+                        <span class="spots-total">/ 1,000</span>
+                    </div>
+                    <p class="card-label">Spots Remaining</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 25.8%"></div>
+                    </div>
+                    <div class="progress-labels">
+                        <span>258 Joined</span>
+                        <span>1,000 Max</span>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-glow"></div>
+                    <div class="allocation-info">
+                        <div class="alloc-item">
+                            <span class="alloc-label">Per User Allocation</span>
+                            <span class="alloc-value">20,000 PAP</span>
+                        </div>
+                        <div class="alloc-item">
+                            <span class="alloc-label">Per User Value</span>
+                            <span class="alloc-value gold-text">~$500</span>
+                        </div>
+                        <div class="alloc-item">
+                            <span class="alloc-label">Supply Allocated</span>
+                            <span class="alloc-value">2%</span>
+                        </div>
+                        <div class="alloc-item">
+                            <span class="alloc-label">Max Supply</span>
+                            <span class="alloc-value">1B PAP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-glow"></div>
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaemcaaagoq/security-badge-gold.png" alt="Security" class="card-icon-img small">
+                    <h4 class="card-title">Security Status</h4>
+                    <div class="security-items">
+                        <div class="sec-item active"><span class="sec-dot"></span>Anti-Bot Protection</div>
+                        <div class="sec-item active"><span class="sec-dot"></span>Wallet Validation</div>
+                        <div class="sec-item active"><span class="sec-dot"></span>Duplicate Prevention</div>
+                        <div class="sec-item active"><span class="sec-dot"></span>Social Verification</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Waitlist Section -->
+    <section id="join" class="join-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Join the <span class="gold-text">Waitlist</span></h2>
+                <p class="section-desc">Complete the tasks below to secure your spot in the PAP Premium Airdrop</p>
+            </div>
+
+            <!-- Social Tasks -->
+            <div class="tasks-container">
+                <h3 class="tasks-title">Required Tasks</h3>
+                <div class="tasks-grid">
+                    <div class="task-card" id="taskX">
+                        <div class="task-number">1</div>
+                        <div class="task-info">
+                            <h4>Follow on X (Twitter)</h4>
+                            <p>Follow @premiumaidrop on X</p>
+                        </div>
+                        <a href="https://x.com/premiumaidrop" target="_blank" rel="noopener noreferrer" class="task-btn" onclick="completeTask('x')">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            Follow
+                        </a>
+                        <div class="task-check" id="checkX">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        </div>
+                    </div>
+                    <div class="task-card" id="taskTg">
+                        <div class="task-number">2</div>
+                        <div class="task-info">
+                            <h4>Join Telegram Group</h4>
+                            <p>Join @premiumaidrop on Telegram</p>
+                        </div>
+                        <a href="https://t.me/premiumaidrop" target="_blank" rel="noopener noreferrer" class="task-btn tg-btn" onclick="completeTask('tg')">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            Join
+                        </a>
+                        <div class="task-check" id="checkTg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form-container" id="formContainer">
+                <h3 class="form-title">Submit Your Details</h3>
+                <form id="waitlistForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="xUsername">X (Twitter) Username</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">@</span>
+                            <input type="text" id="xUsername" placeholder="your_x_username" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tgUsername">Telegram Username</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">@</span>
+                            <input type="text" id="tgUsername" placeholder="your_telegram_username" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="walletAddress">EVM Wallet Address</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">0x</span>
+                            <input type="text" id="walletAddress" placeholder="1234...abcd" required>
+                        </div>
+                        <span class="input-hint">Enter a valid EVM-compatible wallet address (0x...)</span>
+                    </div>
+                    <div class="captcha-container">
+                        <label class="captcha-label">
+                            <input type="checkbox" id="captchaCheck" required>
+                            <span class="captcha-box"></span>
+                            I am not a robot
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span>Secure My Spot</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Verification Status -->
+            <div class="verification-container" id="verificationContainer" style="display: none;">
+                <div class="success-animation">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 12l3 3 5-5"/>
+                    </svg>
+                </div>
+                <h3 class="verification-title">Waitlist Confirmed!</h3>
+                <p class="verification-desc">Done! You have successfully joined the PAP waitlist rewards.</p>
+                <div class="verification-checklist">
+                    <div class="verify-item verified">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>Follow X</span>
+                    </div>
+                    <div class="verify-item verified">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>Join Telegram</span>
+                    </div>
+                    <div class="verify-item verified">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>Wallet Submitted</span>
+                    </div>
+                    <div class="verify-item verified">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>Waitlist Confirmed</span>
+                    </div>
+                </div>
+                <div class="user-allocation-card">
+                    <h4>Your Allocation</h4>
+                    <div class="alloc-amount gold-text">20,000 PAP</div>
+                    <div class="alloc-usd">≈ $500 USD</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked <span class="gold-text">Questions</span></h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What is PAP Premium Airdrop?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>PAP Premium Airdrop ($PAP) is an exclusive FCFS (First Come First Serve) waitlist rewards program designed to reward the first 1,000 early community supporters with a share of 20,000,000 PAP tokens (2% of total supply).</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>How do I qualify for the waitlist?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To qualify, you must: 1) Follow @premiumaidrop on X (Twitter), 2) Join the official Telegram group, and 3) Submit your X username, Telegram username, and a valid EVM wallet address. Only the first 1,000 verified users will qualify.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>How much will I receive?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Each qualified user will receive an equal allocation of 20,000 PAP tokens from the total pool of 20,000,000 PAP. The estimated value per allocation is approximately $500 based on the $500,000 total reward pool.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Is this a token sale or presale?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. This is NOT a token sale, presale, or private sale. PAP Premium Airdrop is exclusively a waitlist rewards program. There are no purchases required. Rewards are distributed fairly to verified early supporters on a first-come, first-served basis.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>When will tokens be distributed?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Token distribution details will be announced after the waitlist is filled. All 1,000 verified participants will receive notifications through their submitted social accounts. Stay tuned to our official channels for updates.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What wallets are supported?</span>
+                        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Any EVM-compatible wallet is supported. This includes MetaMask, Trust Wallet, Coinbase Wallet, and any other wallet that generates a standard Ethereum address (starting with 0x). Make sure to submit the correct address as it cannot be changed after submission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaeiyqaagnq/pap-token-gold-3d.png" alt="PAP" class="footer-logo-img">
+                        <span>PAP PREMIUM AIRDROP</span>
+                    </div>
+                    <p class="footer-desc">The exclusive FCFS waitlist rewards program for early PAP community supporters. No token sale. No presale. Rewards only.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#dashboard">Dashboard</a>
+                    <a href="#join">Join Waitlist</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Community</h4>
+                    <a href="https://x.com/premiumaidrop" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+                    <a href="https://t.me/premiumaidrop" target="_blank" rel="noopener noreferrer">Telegram</a>
+                </div>
+                <div class="footer-token">
+                    <h4>Token Info</h4>
+                    <div class="token-info-item"><span>Name:</span> PAP PREMIUM AIRDROP</div>
+                    <div class="token-info-item"><span>Symbol:</span> $PAP</div>
+                    <div class="token-info-item"><span>Max Supply:</span> 1,000,000,000</div>
+                    <div class="token-info-item"><span>Waitlist Pool:</span> 20,000,000</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PAP PREMIUM AIRDROP. All rights reserved.</p>
+                <p class="footer-disclaimer">This is a waitlist rewards program only. No investment required. No token sale.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Coming Soon Popup -->
+    <div class="popup-overlay" id="popupOverlay" onclick="hideComingSoon()">
+        <div class="popup-card" onclick="event.stopPropagation()">
+            <h3>Coming Soon</h3>
+            <p>Full details about PAP Premium Airdrop will be revealed soon. Join the waitlist to stay updated!</p>
+            <button class="btn-primary" onclick="hideComingSoon()">Got it</button>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+
+  </html>
