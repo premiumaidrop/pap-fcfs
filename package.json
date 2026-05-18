@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.8"
+  },
   "devDependencies": {
     "vite": "^6.3.5"
   }
