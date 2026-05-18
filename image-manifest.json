@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "results": [
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaeiyqaagnq/pap-token-gold-3d.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaeiyqaagnq/pap-token-gold-3d.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaeiyqaagnq/pap-token-gold-3d.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Premium 3D golden cryptocurrency token coin with 'PAP' text engraved in the center, metallic gold surface with reflective highlights, futuristic circuit board patterns etched around the edge, floating in dark space with subtle gold particle effects, luxury crypto branding",
+      "style": "3d",
+      "filename": "pap-token-gold-3d.png"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaejcqaagpa/hero-background-crypto-dark.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaejcqaagpa/hero-background-crypto-dark.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaejcqaagpa/hero-background-crypto-dark.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Futuristic dark crypto hero banner background with abstract golden light streaks, floating geometric shapes, blockchain network nodes connected by gold lines, deep black space background with subtle purple and gold nebula effects, premium luxury feel",
+      "style": "photorealistic",
+      "filename": "hero-background-crypto-dark.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaemcaaagoq/security-badge-gold.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaemcaaagoq/security-badge-gold.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaemcaaagoq/security-badge-gold.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Premium golden shield badge icon representing security and verification for crypto platform, metallic gold with silver accents, checkmark in center, futuristic design with glowing edges, dark background",
+      "style": "3d",
+      "filename": "security-badge-gold.png"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaei7yaagqq/reward-pool-treasure.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaei7yaagqq/reward-pool-treasure.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1243767/2026-05-17/oyaei7yaagqq/reward-pool-treasure.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Futuristic 3D golden treasure chest overflowing with gold coins marked PAP, premium crypto rewards concept, metallic surfaces with reflective highlights, floating particles, dark space background, luxury airdrop reward visual",
+      "style": "3d",
+      "filename": "reward-pool-treasure.png"
+    }
+  ],
+  "success_count": 4,
+  "failed_count": 0,
+  "message": "Generated 4/4 images"
+}
